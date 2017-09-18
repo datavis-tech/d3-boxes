@@ -9,10 +9,10 @@
   "license": "BSD-3-Clause",
   "main": "build/d3-boxes.js",
   "jsnext:main": "index",
-  "homepage": "https://github.com/{USERNAME}/d3-boxes",
+  "homepage": "https://github.com/curran/d3-boxes",
   "repository": {
     "type": "git",
-    "url": "https://github.com/{USERNAME}/d3-boxes.git"
+    "url": "https://github.com/curran/d3-boxes.git"
   },
   "scripts": {
     "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-boxes.js -- index.js",
