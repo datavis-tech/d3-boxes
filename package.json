@@ -1,0 +1,28 @@
+{
+  "name": "d3-boxes",
+  "version": "0.0.1",
+  "description": "Nested box layout for use with D3 visualizations.",
+  "keywords": [
+    "d3",
+    "d3-module"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/d3-boxes.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/{USERNAME}/d3-boxes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{USERNAME}/d3-boxes.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-boxes.js -- index.js",
+    "test": "tape 'test/**/*-test.js'",
+    "prepublish": "npm run test && uglifyjs build/d3-boxes.js -c -m -o build/d3-boxes.min.js",
+    "postpublish": "zip -j build/d3-boxes.zip -- LICENSE README.md build/d3-boxes.js build/d3-boxes.min.js"
+  },
+  "devDependencies": {
+    "rollup": "0.27",
+    "tape": "4",
+    "uglify-js": "2"
+  }
+}
