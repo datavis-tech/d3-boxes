@@ -16,13 +16,14 @@
   },
   "scripts": {
     "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-boxes.js -- index.js",
-    "test": "tape 'test/**/*-test.js'",
+    "test": "mocha",
     "prepublish": "npm run test && uglifyjs build/d3-boxes.js -c -m -o build/d3-boxes.min.js",
     "postpublish": "zip -j build/d3-boxes.zip -- LICENSE README.md build/d3-boxes.js build/d3-boxes.min.js"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
     "rollup": "0.27",
-    "tape": "4",
     "uglify-js": "2"
   }
 }
