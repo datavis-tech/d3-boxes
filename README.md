@@ -6,21 +6,35 @@ Nested box layout for use with D3 visualizations. Check out this [example](https
 
 The above nested box structure can be configured like this:
 
-```
-{
-  "orientation": "vertical",
-  "children": [
+```js
+var layout = {
+  orientation: "vertical",
+  children: [
     "A",
-    "B",
     {
-      "orientation": "horizontal",
-      "children": [
-        "C",
-        "D"
-      ]
-    }
+      orientation: "horizontal",
+      children: [
+        "B",
+        "C"
+      ],
+      size: 2 // Make this layer have a size weight of 2 (default is 1)
+    },
+    "D"
   ]
-}
+};
+
+var sizes = {
+  A: {
+    size: 2 // Make the "A" box have a size weight of 2 (default is 1)
+  }
+};
+
+var box = {
+  width: width,
+  height: height
+};
+
+var boxes = d3.boxes(layout, sizes, box);
 ```
 
 The following features are also present:
