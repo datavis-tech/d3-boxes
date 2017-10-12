@@ -1,5 +1,5 @@
 # d3-boxes
-Nested box layout for use with D3 visualizations.
+Nested box layout for use with D3 visualizations. Check out this [example](https://bl.ocks.org/curran/ad6d4eaa6cf39bf58769697307ec5f3a)!
 
 ![Boxes](http://curran.github.io/images/visEditor/boxes.png)
 
