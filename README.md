@@ -1,7 +1,8 @@
 # d3-boxes
 Nested box layout for use with D3 visualizations. Check out this [example](https://bl.ocks.org/curran/ad6d4eaa6cf39bf58769697307ec5f3a)!
 
-![Boxes](http://curran.github.io/images/visEditor/boxes.png)
+[![image](https://user-images.githubusercontent.com/68416/31494037-44898766-af6f-11e7-95a1-57a04c0a9a81.png)](https://bl.ocks.org/curran/ad6d4eaa6cf39bf58769697307ec5f3a)
+
 
 The above nested box structure can be configured like this:
 
