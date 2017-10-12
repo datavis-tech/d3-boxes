@@ -30,12 +30,13 @@ var sizes = {
 };
 
 var box = {
-  width: width,
-  height: height
+  width: 960,
+  height: 500
 };
 
 var boxes = d3.boxes(layout, sizes, box);
 ```
+For more context, see the [full example code](https://bl.ocks.org/curran/ad6d4eaa6cf39bf58769697307ec5f3a).
 
 The following features are also present:
 
