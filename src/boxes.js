@@ -84,7 +84,10 @@ export default function boxes(layout, sizes, box){
         result[child] = childBox;
       } else {
         var childResult = boxes(child, sizes, childBox);
-        if (child.name) {result[child.name] = childBox; result[child.name].nonleaf = true;};
+        if (child.name) {
+          result[child.name] = childBox;
+          result[child.name].nonleaf = true;
+        }
         Object.keys(childResult).forEach(function (alias){
           result[alias] = childResult[alias];
         });
