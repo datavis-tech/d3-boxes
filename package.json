@@ -1,6 +1,6 @@
 {
   "name": "d3-boxes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Nested box layout for use with D3 visualizations.",
   "keywords": [
     "d3",
