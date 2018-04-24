@@ -77,6 +77,7 @@ Takes as input the following arguments:
       either a leaf node or internal node.
     * `size` The size of the internal node, with the same specifications
       as values within `sizes` (see next bullet point).
+    * optional `name` in order to get position and size of this internal node.
 * `sizes` An object that specifies component size options, where
   * Keys are component alias strings.
   * Values are objects with the following properties:
@@ -110,5 +111,6 @@ Returns an object where
   * `y` The Y offset of the box in pixels.
   * `width` The width of the box in pixels.
   * `height` The height of the box in pixels.
+  * `nonleaf` A boolean (true/ undefined) in case of a named internal node (composed boxe).
   * These box dimensions are quantized from floats to ints such that there are no gaps.
 

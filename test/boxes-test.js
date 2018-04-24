@@ -434,4 +434,24 @@ describe("boxes", function () {
     expect(result.a.width + result.b.width + result.c.width).to.equal(100);
 
   });
+
+  it("named internal node", function() {
+     var layout = {
+          orientation: "horizontal",
+          children: [
+            {orientation: "vertical",
+              children: ["a1", "a2"],
+              name: "a"
+            }, 
+            "b",
+            "c"]
+        },
+        box = { width: 100, height: 100 },
+        result = boxes(layout, null, box);
+    expect(result.a.x).to.equal(0);
+    expect(result.a.y).to.equal(0);
+    expect(result.a.width).to.equal(33);
+    expect(result.a.height).to.equal(100);
+    expect(result.a.nonleaf).to.equal(true);
+ });
 });
